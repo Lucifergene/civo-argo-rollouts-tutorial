@@ -1,0 +1,14 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: blue-green-deployment
+  namespace: argocd
+spec:
+  destination:
+    namespace: nodejs
+    server: 'https://kubernetes.default.svc'
+  source:
+    path: manifests
+    repoURL: 'https://github.com/Lucifergene/civo-argo-rollouts-tutorial'
+    targetRevision: deployment
+  project: default
