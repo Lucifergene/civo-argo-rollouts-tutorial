@@ -8,7 +8,7 @@ jobs:
   build-publish:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Build and push Docker image
         uses: docker/build-push-action@v1.1.0
         with:
@@ -23,7 +23,7 @@ jobs:
     needs: build-publish
     steps:
       - name: Check out code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Install Kustomize
         uses: imranismail/setup-kustomize@v1
@@ -53,7 +53,7 @@ jobs:
     needs: bump-docker-tag
     steps:
       - name: Check out code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Install Civo CLI
         env:
