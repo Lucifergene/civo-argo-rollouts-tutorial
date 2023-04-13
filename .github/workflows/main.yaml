@@ -81,28 +81,4 @@ jobs:
         run: |
           kubectl apply -f argocd/manual-sync-config.yaml
 
-  argocd-manual-sync:
-    name: Sync the ArgoCD Application manually
-    runs-on: ubuntu-latest
-    needs: argocd-configure
-    steps:
-      - name: Check out code
-        uses: actions/checkout@v2
-
-      - name: Install ArgoCD CLI
-        env:
-          URL: https://github.com/argoproj/argo-cd/releases/latest/download/argocd-linux-amd64
-        run: |
-          [ -w /usr/local/bin ] && SUDO="" || SUDO=sudo
-          $SUDO curl --insecure -sSL -o /usr/local/bin/argocd $URL
-          $SUDO chmod +x /usr/local/bin/argocd
-
-      - name: ArgoCD CLI login
-        run: argocd login ${{ secrets.ARGOCD_SERVER }} --insecure --username ${{ secrets.ARGOCD_USERNAME }} --password ${{ secrets.ARGOCD_PASSWORD }}
-
-      - name: Manual sync
-        run: argocd app sync ${{ secrets.APP_NAME }}
-
-      - name: Wait for application to reach a synced and healthy state
-        run: argocd app wait ${{ secrets.APP_NAME }}
 

@@ -12,3 +12,7 @@ spec:
     repoURL: 'https://github.com/Lucifergene/civo-argo-rollouts-tutorial'
     targetRevision: deployment
   project: default
+  syncPolicy:
+    automated:
+      prune: false
+      selfHeal: false
