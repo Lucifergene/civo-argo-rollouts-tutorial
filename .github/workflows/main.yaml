@@ -79,6 +79,6 @@ jobs:
 
       - name: Apply ArgoCD manifests on Civo
         run: |
-          kubectl apply -f argocd/manual-sync-config.yaml
+          kubectl apply -f argocd/config.yaml
 
 

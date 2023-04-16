@@ -1,6 +1,6 @@
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: nodejs
+  name: civo-tutorial
   labels:
-    name: nodejs
+    name: civo-tutorial
