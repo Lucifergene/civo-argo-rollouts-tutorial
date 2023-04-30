@@ -9,4 +9,4 @@ namespace: nodejs
 images:
 - name: civo-argo-rollouts-tutorial
   newName: avik6028/civo-argo-rollouts-tutorial
-  newTag: 5e18ac817065a031f592112556c2fd55594cb83e
+  newTag: 6868afc82f32ef7405ff3a4128fd43ee2a8743b5
