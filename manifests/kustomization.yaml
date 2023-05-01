@@ -5,7 +5,7 @@ resources:
 - service-active.yaml
 - service-preview.yaml
 - namespace.yaml
-namespace: nodejs
+namespace: civo-tutorial
 images:
 - name: civo-argo-rollouts-tutorial
   newName: avik6028/civo-argo-rollouts-tutorial
