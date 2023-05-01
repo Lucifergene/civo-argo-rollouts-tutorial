@@ -9,4 +9,4 @@ namespace: civo-tutorial
 images:
 - name: civo-argo-rollouts-tutorial
   newName: avik6028/civo-argo-rollouts-tutorial
-  newTag: aed5c620f93b53b926f90b66ff43fbeb7fd08284
+  newTag: e71820658abe3c56fffc09f2e438377295b968a3
